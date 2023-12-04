@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.conteiner {
+  aspect-ratio: 1/1;
+  height: 55vh;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.479));
+  overflow: hidden;
+  color: #394539;
+  /* opacity: 0; */
+}
+
+.top {
+  height: 80%;
+  width: 100%;
+
+  /* background-color: #394568; */
+  background-color: #1a2238;
+  z-index: 0;
+}
+.bottom {
+  width: 100%;
+  height: 20%;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 1.5fr;
+  place-items: center;
+  background-color: white;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 20px;
+}
+h1 {
+  font-size: 45px;
+  line-height: 90px;
+  font-weight: 300;
+  margin-left: 20px;
+}
+.cielo {
+  width: 100%;
+  height: 50%;
+}
+/* LUNA */
+.luna {
+  aspect-ratio: 1/1;
+  height: 50%;
+  background-color: #f6edbd;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px #f6edbd;
+  position: relative;
+  overflow: hidden;
+  top: 40px;
+  left: 60px;
+  animation: rise 1s ease-in-out both;
+  z-index: 1;
+}
+
+.crater {
+  background-color: #ece1a8;
+  position: absolute;
+  border-radius: 40%;
+  aspect-ratio: 1/1;
+  z-index: 1;
+}
+#c-01 {
+  width: 13px;
+  top: 11px;
+  left: 35px;
+}
+#c-02 {
+  width: 13px;
+  top: 17px;
+  left: 1.5px;
+}
+#c-03 {
+  width: 13px;
+  top: 65px;
+  left: 15px;
+}
+#c-04 {
+  width: 5px;
+  top: 30px;
+  left: 20px;
+}
+#c-05 {
+  width: 5px;
+  top: 45px;
+  left: 45px;
+}
+#c-06 {
+  width: 8px;
+  top: 35px;
+  left: 30px;
+}
+#c-07 {
+  width: 8px;
+  top: 50px;
+  left: 20px;
+}
+#c-08 {
+  width: 8px;
+  top: 20px;
+  left: 53.5px;
+}
+#c-09 {
+  width: 8px;
+  top: 32px;
+  left: 70px;
+}
+#c-10 {
+  width: 7px;
+  top: 45px;
+  left: 58px;
+}
+#c-11 {
+  width: 7px;
+  top: 63px;
+  left: 40px;
+}
+/* LUNA */
+
+/* NUBES */
+.nubes {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.nube {
+  width: 75%;
+  aspect-ratio: 1.15/1;
+  position: absolute;
+  background-color: aqua;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: #303c5d;
+}
+
+.n-01 {
+  opacity: 1;
+  top: 80px;
+  left: 70px;
+  z-index: 2;
+}
+.n-02 {
+  opacity: 1;
+  top: 100px;
+  left: -110px;
+  z-index: 2;
+}
+.n-03 {
+  opacity: 1;
+  top: 100px;
+  left: 270px;
+  z-index: 2;
+}
+.n-04 {
+  opacity: 1;
+  top: 50px;
+  left: -40px;
+  background-color: #29314f;
+  z-index: 1;
+}
+.n-04 {
+  opacity: 1;
+  top: 55px;
+  left: -40px;
+  background-color: #29314f;
+  z-index: 1;
+}
+.n-05 {
+  opacity: 1;
+  top: 50px;
+  left: 190px;
+  background-color: #29314f;
+  z-index: 1;
+}
+/* NUBES */
+
+/*  GOTAS */
+
+.drops {
+  background-color: #7fc1f9;
+  position: absolute;
+}
+
+.big {
+  position: absolute;
+  z-index: 20;
+  bottom: 90px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: drop 0s 0s linear infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 100%;
+  opacity: 1;
+}
+.big::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #7fc1f9;
+}
+.big::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  border-radius: 50%;
+
+  background-color: #7fc1f9;
+}
+.medium {
+  position: absolute;
+  z-index: 20;
+  bottom: 90px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: drop 0s 0s linear infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 100%;
+  opacity: 0.6;
+  background-color: #7fc1f9;
+}
+.medium::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #7fc1f9;
+}
+.medium::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -4px;
+  left: 2px;
+  width: 2px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #7fc1f9;
+}
+.small {
+  position: absolute;
+  z-index: 20;
+  bottom: 90px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: drop 0s 0s linear infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 100%;
+  opacity: 0.3;
+  background-color: #7fc1f9;
+}
+.small::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #7fc1f9;
+}
+.small::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -3px;
+  left: 1px;
+  width: 2px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #7fc1f9;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate3d(40px, -350px, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  85% {
+    transform: translate3d(0px, 5px, 0px) scaleX(1) scaleY(1) rotate(17deg);
+  }
+  100% {
+    transform: translate3d(0px, 5px, 0px) scaleX(3) scaleY(0) rotate(0deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translate(-20px, 200px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+/*  GOTAS */

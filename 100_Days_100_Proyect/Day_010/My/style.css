@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+
+.container {
+  aspect-ratio: 1/1;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(34, 34, 34);
+}
+
+.main-circle {
+  position: relative;
+  aspect-ratio: 1/1;
+  height: 90%;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  /* animation: border-ani 4s ease-in-out infinite; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(51, 51, 51);
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  aspect-ratio: 1/1;
+  height: 93%;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  /* animation: border-ani 4s ease-in-out infinite; */
+
+  background-color: rgb(37, 37, 37);
+  flex-direction: column;
+}
+
+.point {
+  position: absolute;
+  aspect-ratio: 1/1;
+  height: 83%;
+  /* border: 1px solid white; */
+  rotate: 0deg;
+}
+.point .point-1 {
+  position: absolute;
+  top: top;
+  left: 132.85px;
+  height: 1px;
+  width: 1px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.point .point-2 {
+  position: absolute;
+  top: 265.7px;
+  left: 132.85px;
+  height: 1px;
+  width: 1px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.point .point-4 {
+  position: absolute;
+  top: 132.85px;
+  left: 0px;
+  height: 1px;
+  width: 1px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.point .point-3 {
+  position: absolute;
+  top: 132.85px;
+  left: 265.7px;
+  height: 1px;
+  width: 1px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.date,
+.life {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.right {
+  text-align: right;
+}
+span {
+  margin-right: 2px;
+}
+
+h2 {
+  font-size: 3rem;
+}
+p {
+  font-size: 0.75rem;
+}
+.spinner {
+  position: absolute;
+  width: 302px;
+  height: 302px;
+  border-radius: 50%;
+}
+.spinner circle {
+  fill: none;
+  stroke: #f85b5b;
+  stroke-width: 3;
+  stroke-dasharray: 625;
+  animation: spinner 5s linear infinite;
+  transform-origin: center center;
+  transform: rotate(-90deg);
+}
+@keyframes spinner {
+  from {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+  to {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}

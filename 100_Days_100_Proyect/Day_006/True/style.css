@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #958676;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(255, 204, 107);
+  background: linear-gradient(
+    58deg,
+    rgba(255, 204, 107, 1) 0%,
+    rgba(223, 177, 4, 1) 100%
+  );
+}
+
+.conteiner {
+  aspect-ratio: 1/1;
+  width: 500px;
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.411);
+}
+.left {
+  height: 80%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foto {
+  height: 130px;
+  width: 130px;
+  background-image: url(../My/img/descarga.jpg);
+  background-size: contain;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.foto::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: -6px;
+  left: -6px;
+  border: 1px solid #786450;
+  border-radius: 50%;
+  border-color: #786450 #786450 #786450 transparent;
+  transition: all 1.5s ease-in-out;
+}
+
+.foto:hover::before {
+  transform: rotateZ(360deg);
+}
+
+.foto::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -11.5px;
+  left: -11.5px;
+  border: 1px solid #786450;
+  border-radius: 50%;
+  border-color: #786450 transparent #786450 #786450;
+  transition: all 1.5s ease-in-out;
+}
+
+.foto:hover::after {
+  transform: rotateZ(-360deg);
+}
+
+.nombre {
+  text-align: center;
+  margin-bottom: 10%;
+  font-size: 1.3rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 55%;
+  gap: 10%;
+  font-weight: bold;
+}
+
+.link {
+  height: 40%;
+  border-radius: 30px;
+  border: 2px solid #958676;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link:hover {
+  color: white;
+  background-color: #786450;
+  transition: 500ms ease-in-out;
+}
+
+/* RIGHT */
+/* **************************** */
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  background-color: #f5e8df;
+  /* height: 33.3px; */
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+}
+
+.info span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.info:hover {
+  background-color: #d6c6bb;
+}
+
+/* RIGHT */
+/* **************************** */

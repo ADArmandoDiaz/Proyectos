@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  background: rgb(219, 192, 157);
+  background: linear-gradient(
+    58deg,
+    rgba(219, 192, 157, 1) 0%,
+    rgba(236, 217, 194, 1) 50%,
+    rgba(219, 192, 157, 1) 100%
+  );
+  border-radius: 5px;
+  position: relative;
+}
+
+.leg {
+  position: absolute;
+  top: 0;
+  left: 147px;
+  width: 151px;
+  height: 245px;
+  transform-origin: 50% 0;
+  /* background-color: brown; */
+}
+.left {
+  animation: left-swing 2s ease-in-out infinite;
+}
+.right {
+  animation: left-swing 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+@keyframes left-swing {
+  0%,
+  100% {
+    transform: rotate(-22deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+}
+
+.shoe-1 {
+  position: absolute;
+  width: 151px;
+  height: 128px;
+  left: 0;
+  bottom: 0;
+  background-image: url(../My/img/doc-martens.png);
+  background-size: contain;
+  animation: shoe-turn 2s ease-in-out infinite;
+}
+
+.shoe-2 {
+  position: absolute;
+  width: 151px;
+  height: 128px;
+  left: 0;
+  bottom: 0;
+  background-image: url(../My/img/doc-martens.png);
+  background-size: contain;
+  animation: shoe-turn 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.suelo {
+  position: absolute;
+  width: 100%;
+  height: 39%;
+  background-color: #232323;
+  bottom: 0;
+}
+
+@keyframes shoe-turn {
+  0%,
+  100% {
+    transform: rotate(-10deg) translateY(-5px) translateX(10px);
+  }
+  25% {
+    transform: rotate(0deg) translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: rotate(10deg) translateY(-10px) translateX(10px);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-30px) translateX(0);
+  }
+}

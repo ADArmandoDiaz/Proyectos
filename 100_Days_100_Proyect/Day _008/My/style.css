@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.btn {
+  position: absolute;
+  text-align: center;
+
+  width: 25%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  text-decoration-color: white;
+  font-size: 1.5rem;
+  background-color: lightgreen;
+  transition: all 0.3 ease-in-out;
+  cursor: pointer;
+  z-index: 30;
+}
+.desaparecer {
+  opacity: 0;
+}
+.active div::after {
+  animation-play-state: paused;
+}
+
+.conteiner {
+  background-color: black;
+  /* border: 1px solid white; */
+  aspect-ratio: 1/1;
+  height: 57vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  filter: contrast(25);
+
+  transition: all 0.3s ease-in-out;
+}
+.active {
+  opacity: 0;
+}
+
+.main-circle {
+  /* background-color: white; */
+  aspect-ratio: 1/1;
+  position: absolute;
+  height: 27.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 50%; */
+}
+
+.principal {
+  background-color: white;
+  aspect-ratio: 1/1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  filter: blur(15px);
+}
+
+/* burbujas */
+
+.burbuja {
+  /* background-color: blueviolet; */
+  aspect-ratio: 1/1;
+  position: absolute;
+  height: 50%;
+  z-index: 10;
+  opacity: 0;
+}
+.b-01 {
+  opacity: 1;
+  transform: rotate(30deg);
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+
+  /* opacity: 0; */
+}
+.b-01::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 75% 75%;
+  border-radius: 50%;
+  filter: blur(5px);
+  /* opacity: 0; */
+  animation: rotar 2.7s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.b-02 {
+  opacity: 1;
+  transform: rotate(5deg);
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+  /* opacity: 0; */
+}
+
+.b-02::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 70% 70%;
+  border-radius: 50%;
+  filter: blur(5px);
+  /* opacity: 0; */
+  animation: rotar 2.9s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.b-03 {
+  opacity: 1;
+  transform: rotate(5deg);
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+  transform: rotate(223deg);
+  /* opacity: 0; */
+}
+
+.b-03::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 65% 65%;
+  border-radius: 50%;
+  filter: blur(5px);
+  /* opacity: 0; */
+  animation: rotar 3.1s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.b-04 {
+  opacity: 1;
+  transform: rotate(5deg);
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+  transform: rotate(209deg);
+  /* opacity: 0; */
+}
+.b-04::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 63% 63%;
+  border-radius: 50%;
+  filter: blur(5px);
+  /* opacity: 0; */
+  animation: rotar 3.3s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+.b-05 {
+  opacity: 1;
+  transform: rotate(5deg);
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+  transform: rotate(53deg);
+  /* opacity: 0; */
+}
+.b-05::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 55% 55%;
+  border-radius: 50%;
+  filter: blur(5px);
+  /* opacity: 0; */
+  animation: rotar 3.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.b-06 {
+  opacity: 1;
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+  transform: rotate(222deg);
+  /* opacity: 0; */
+}
+.b-06::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 35% 35%;
+  border-radius: 50%;
+  filter: blur(5px);
+  opacity: 0;
+  animation: rotar 3.7s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+.b-07 {
+  opacity: 1;
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+  transform: rotate(86deg);
+  /* opacity: 0; */
+}
+
+.b-07::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 33% 33%;
+  border-radius: 50%;
+  filter: blur(5px);
+  /* opacity: 0; */
+  animation: rotar 3.9s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+.b-08 {
+  opacity: 1;
+  position: absolute;
+  /* animation: b-01 3s ease-in-out infinite; */
+  transform: rotate(127deg);
+  opacity: 0;
+}
+.b-08::after {
+  content: "";
+  aspect-ratio: 1/1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+
+  transform-origin: 25% 25%;
+  border-radius: 50%;
+  filter: blur(5px);
+  opacity: 0;
+  animation: rotar 4.1s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+/* burbujas */
+.circle {
+  position: absolute;
+  /* background-color: aqua; */
+  aspect-ratio: 1/1;
+  width: 20%;
+  /* border-radius: 50%; */
+}
+
+/* BALLS */
+
+.c-01 {
+  aspect-ratio: 1/1;
+  width: 7.5%;
+  z-index: 10;
+  transform: rotate(255deg);
+}
+.c-01::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 70px 70px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 3.7s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.c-02 {
+  aspect-ratio: 1/1;
+  width: 8%;
+  z-index: 10;
+  transform: rotate(129deg);
+}
+.c-02::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 67px 67px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 3.9s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.c-03 {
+  aspect-ratio: 1/1;
+  width: 9%;
+  z-index: 10;
+  transform: rotate(184deg);
+}
+.c-03::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 65px 65px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 4.1s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+.c-04 {
+  aspect-ratio: 1/1;
+  width: 9%;
+  z-index: 10;
+  transform: rotate(283deg);
+}
+.c-04::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 63px 63px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 4.3s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+.c-05 {
+  aspect-ratio: 1/1;
+  width: 10%;
+  z-index: 10;
+  transform: rotate(59deg);
+}
+.c-05::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 61px 61px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 4.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.c-06 {
+  aspect-ratio: 1/1;
+  width: 11%;
+  z-index: 10;
+  transform: rotate(121deg);
+}
+.c-06::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 59px 59px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 4.7s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+.c-07 {
+  aspect-ratio: 1/1;
+  width: 12%;
+  z-index: 10;
+  transform: rotate(23deg);
+}
+.c-07::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 57px 57px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 4.9s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+.c-08 {
+  aspect-ratio: 1/1;
+  width: 13%;
+  z-index: 10;
+  transform: rotate(170deg);
+}
+.c-08::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 55px 55px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 5.1s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+.c-09 {
+  aspect-ratio: 1/1;
+  width: 14%;
+  z-index: 10;
+  transform: rotate(245deg);
+}
+.c-09::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 53px 53px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 5.3s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+.c-10 {
+  aspect-ratio: 1/1;
+  width: 15%;
+  z-index: 10;
+  transform: rotate(276deg);
+}
+.c-10::after {
+  content: "";
+  position: absolute;
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: white;
+  transform-origin: 51px 51px;
+  border-radius: 50%;
+  filter: blur(3px);
+  z-index: 1;
+  animation: rotar 5.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+/* BALLS */
+/* animacion */
+
+@keyframes rotar {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+    /* bottom: 0; */
+  }
+  50% {
+  }
+  100% {
+    transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}
+
+/* animacion */

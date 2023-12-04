@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(70, 165, 129);
+  height: 100vh;
+}
+.cuadro {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: white;
+  /* aspect-ratio: 2/1; */
+  width: 50vh;
+  height: 40vh;
+  /* box-shadow: 10px 10px 50px 5px black; */
+  filter: drop-shadow(20px 20px 9px #0000004f);
+}
+
+.superior {
+  background-color: rgb(255, 190, 94);
+  width: 100%;
+  height: 27%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.superior .text-1 {
+  color: white;
+  width: 67%;
+  height: 50%;
+}
+.superior .text-2 {
+  color: white;
+  width: 30%;
+  height: 50%;
+  text-align: right;
+}
+.inferior {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  width: 100%;
+  height: 73%;
+}
+.inferior .text-sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: right;
+  height: 22%;
+}
+.btn-1,
+.btn-2 {
+  width: 5px;
+  height: 2px;
+  background-color: black;
+}
+.text-sub .btn-1,
+.btn-2,
+.text-1,
+.text-2 {
+  display: inline-block;
+}
+
+.centro {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  height: 56%;
+  width: 100%;
+  /* background-color: wheat; */
+}
+.centro .sub,
+.inf {
+  height: 50%;
+  margin-left: 2.5%;
+  width: 95%;
+  /* background-color: aqua; */
+  border-top: 1px solid rgba(128, 128, 128, 0.281);
+}
+.centro .inf {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+}
+.centro .sub div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 12.5%;
+  height: 90%;
+  background-color: antiquewhite;
+}
+.text-inf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+}
+
+.text-inf h3 {
+  display: inline-block;
+  width: 16%;
+  /* text-align: center; */
+  text-decoration: none;
+  font-size: 10px;
+  margin-left: 15px;
+}

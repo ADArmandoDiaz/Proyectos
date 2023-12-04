@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(75deg, rgb(241, 160, 67) 0%, rgb(177, 85, 0)) 100%;
+}
+
+.conteiner {
+  aspect-ratio: 1.1/1;
+  width: 80%;
+  background-color: white;
+}
+
+.cuadro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1.1/1;
+  width: 100%;
+  background-color: white;
+}
+
+.lateral-derecho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: lightskyblue; */
+  width: 60%;
+  height: 100%;
+}
+.cuadro-imagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 55%;
+  border: 1px solid white;
+  gap: 12%;
+}
+.main-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  width: 40%;
+  /* border-right: 1px solid white; */
+  position: relative;
+  /* gap: 50%; */
+}
+.circle-1 {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 100%;
+  /* border: 1px solid white; */
+  border: 1px solid rgb(177, 85, 0);
+  border-right: 1px solid white;
+  border-radius: 50%;
+  /* animation: rotar-1 2s ease-in-out both infinite;
+  animation-delay: 1s; */
+  /* z-index: 1;ç */
+}
+.circle-1:hover {
+  animation: rotar-1 2s ease-in-out both infinite;
+  animation-delay: 1s;
+  transform: rotate(360deg);
+}
+@keyframes rotar-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotar-1-rev {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.circle-2 {
+  position: absolute;
+
+  aspect-ratio: 1/1;
+  width: 94%;
+  border: 1px solid rgb(177, 85, 0);
+  border-left: 1px solid white;
+  border-radius: 50%;
+  /* animation: rotar-2-rev 2s ease-in-out both reverse infinite;
+  animation-delay: 1s; */
+}
+.circle-2:hover {
+  animation: rotar-2 2s ease-in-out both infinite;
+  animation-delay: 1s;
+}
+@keyframes rotar-2 {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotar-2-rev {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+.imagen {
+  width: 85%;
+  aspect-ratio: 1/1;
+  background-image: url(../My/img/descarga.jpg);
+  background-position: center;
+  background-size: contain;
+  clip-path: circle(50%);
+}
+.text {
+  /* margin-top: 25px; */
+  text-align: center;
+  font-size: 2.3vw;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45%;
+  border: 1px solid white;
+  gap: 6%;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  height: 20%;
+  border: 1px solid rgb(177, 85, 0);
+  border-top-left-radius: 80vh;
+  border-bottom-left-radius: 80vh;
+  border-top-right-radius: 80vh;
+  border-bottom-right-radius: 80vh;
+}
+.lateral-izquierdo {
+  /* background-color: rgba(177, 86, 0, 0.281); */
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lateral-izquierdo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8vw;
+}
+.lateral-izquierdo div:hover {
+  background-color: rgba(177, 86, 0, 0.479);
+  transition: all 0.7s ease-in-out;
+}
+.sub {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(177, 86, 0, 0.281);
+  border: 1px solid white;
+}
+.centro {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(177, 86, 0, 0.281);
+  border: 1px solid white;
+}
+.inf {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(177, 86, 0, 0.281);
+  border: 1px solid white;
+}
