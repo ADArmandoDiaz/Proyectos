@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 15px;
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border: 1px solid gray;
+  font-size: 2rem;
+}
+.calculator-display {
+  padding: 25px 15px;
+  width: 100%;
+  text-align: right;
+  border: 1px solid gray;
+  overflow: auto;
+}
+.calculator-keypad {
+  display: flex;
+  width: 100%;
+}
+html {
+  font-family: "Georama", san-serif;
+  font-size: 62.5%;
+}
+
+.keypad-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.keypads-buttons {
+  width: 25%;
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.keypads-buttons:hover {
+  filter: brightness(80%);
+  transition: filter 0.25s;
+}
+
+.keypads-buttons.yellow {
+  background-color: yellow;
+}
+
+.keypads-buttons.large {
+  width: 50%;
+}
+
+.keypads-buttons.dark {
+  background-color: lightgray;
+}

@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.blender {
+  width: 700px;
+  height: 500px;
+  /* background-color: red; */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* box-shadow: -50px 100px 100px 100px black; */
+  background-image: url("../img/licuadoraApagada\ \(1\).png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.blender.active {
+  background-image: url("../img/licuadoraEncendida\ \(1\).gif");
+}
+
+.blender-button {
+  width: 38px;
+  height: 57px;
+  border-radius: 10px;
+  /* background-color: blue; */
+  margin: 364px auto 0px;
+}
