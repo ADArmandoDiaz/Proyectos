@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+.conteiner {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  background-color: #4cb6de;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.24);
+  color: white;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.cita {
+  position: relative;
+  margin-top: 90px;
+  padding: 0 30px;
+}
+.cita::before {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  content: "„";
+  font-family: Arial;
+  font-size: 15rem;
+  color: #6ac2e3;
+  line-height: 35px;
+  left: 7px;
+  top: -100px;
+}
+
+.cita p {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.cita .focus {
+  position: relative;
+  display: inline-block;
+  background-color: #286f8a;
+  padding: 0px 8px 5px 8px;
+  margin: -10px 0;
+  cursor: pointer;
+}
+
+.info {
+  background-color: #286f8a;
+  box-sizing: border-box;
+  position: absolute;
+  left: -90px;
+  bottom: 100px;
+  display: block;
+  width: 300px;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: text;
+  visibility: hidden;
+  opacity: 0;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 90%,
+    55% 91%,
+    50% 100%,
+    45% 90%,
+    0 90%
+  );
+  transition: all 0.5s ease-in-out;
+}
+
+.focus:hover .info {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(40px);
+}
+
+.pronounce {
+  background-color: white;
+  display: block;
+  color: #286f8a;
+  padding: 8px 17px 10px 17px;
+  line-height: 16px;
+}
+
+.text {
+  display: block;
+  padding: 13px 17px;
+}
+
+.author {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 28px;
+  /* font-family: "Open Sans", "Helvetica Neue", sans-serif; */
+}
