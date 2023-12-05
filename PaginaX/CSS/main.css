@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  /* border: 1px solid #000; */
+  border: 1px solid black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  /* background-color: rgb(100, 255, 150); */
+}
+header {
+  background-image: url(../IMG/bradcam.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+#menu {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-image: url(../IMG/banner.png); */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  padding: 50px 0;
+}
+header #menu ul {
+  margin: 0;
+  padding: 0;
+}
+header #menu ul li {
+  display: inline-block;
+  padding: 10px;
+  justify-content: center;
+  vertical-align: middle;
+}
+header #menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+header #menu ul li a:hover {
+  text-decoration: underline;
+  /* color: ; */
+}
+header #menu ul #logo {
+  margin-right: 40%;
+  margin-left: 100px;
+}
+/* ***************************************************************************************** */
+#main-conteiner header main {
+  width: 75%;
+  margin: 0 auto;
+}
+main .imagen img {
+  width: 400px;
+}
+/* main {
+  /* display: flex; */
+/* } */
+
+header main div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#main-conteiner header main .text h1 {
+  font-size: 50px;
+  padding: 20px 0;
+}
+button {
+  background-color: #24d9e6;
+  border-radius: 5px;
+  padding: 20px 25px;
+  font-size: 24px;
+  color: white;
+  border: 0;
+  margin: 40px 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+button:hover {
+  padding: 22px 27px;
+  font-size: 26px;
+  color: #24d9e6;
+  background-color: white;
+}
+#main-conteiner header main .imagen img {
+  margin-left: 50px;
+}
+/* .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lista {
+  text-decoration: none;
+  list-style: none;
+} */
+/* header main .text {
+  display: inline-block;
+}
+header main .imagen {
+  display: inline-block;
+} */
+
+/* ******************************************************* */
+.layout {
+  width: 1280px;
+  margin: 250px auto;
+}
+.layout div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.layout h3 {
+  font-size: 48px;
+  padding: 25px 0;
+}
+.layout p {
+  padding: 25px 0;
+  line-height: 32px;
+}
+.layout-left .text {
+  width: 500px;
+}
+.layout-left .imagen {
+  width: 770px;
+  text-align: right;
+}
+.layout-right .text {
+  width: 500px;
+}
+.layout-right .imagen {
+  width: 770px;
+  text-align: center;
+}
